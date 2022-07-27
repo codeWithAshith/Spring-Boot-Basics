@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AfterAspect {
 
-    @AfterReturning(value= "execution(* com.codeWithAshith.SpringBootBasics.business.*.*(..))",
+    @AfterReturning(value= "com.codeWithAshith.SpringBootBasics.aspect.CommonJoinPointConfig.dataLayerExecution()",
     returning = "result")
     public void afterReturning(JoinPoint joinPoint, Object result) {
         // Advice
@@ -19,7 +19,7 @@ public class AfterAspect {
         System.out.println("After Intercept calls - " + result);
     }
 
-    @After(value= "execution(* com.codeWithAshith.SpringBootBasics.business.*.*(..))")
+    @After(value= "com.codeWithAshith.SpringBootBasics.aspect.CommonJoinPointConfig.dataLayerExecution()")
     public void after(JoinPoint joinPoint) {
         // Advice
         System.out.println("After Intercept calls - " + joinPoint);

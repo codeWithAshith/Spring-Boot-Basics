@@ -19,7 +19,7 @@ public class BeforeAspect {
     // Weaver - the framework which implements is called Weaver
 
     // Join Point
-    @Before("execution(* com.codeWithAshith.SpringBootBasics.business.*.*(..))")
+    @Before("com.codeWithAshith.SpringBootBasics.aspect.CommonJoinPointConfig.businessLayerExecution()")
     public void before(JoinPoint joinPoint) {
         // Advice
         System.out.println("Before Intercept calls - " + joinPoint);

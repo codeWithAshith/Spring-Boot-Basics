@@ -18,7 +18,6 @@ public class AfterAspect {
         System.out.println("After Intercept calls - " + joinPoint);
         System.out.println("After Intercept calls - " + result);
     }
-
     
     @AfterThrowing(value= "execution(* com.codeWithAshith.SpringBootBasics.business.*.*(..))",
     throwing = "exception")
